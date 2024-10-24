@@ -41,6 +41,7 @@
         <input type="text" class='form-control' [(ngModel)]="application.assets" id="assets" name="assets">
     </div>
 </form>
+<button (click)="onSubmit()">Submit Application</button>
 <form action="" id="form2">
     <label for="bname">Bank Name: </label>
     <input type="text" [(ngModel)]="loan.bankName"id="bname" name="bname">

@@ -14,13 +14,13 @@ export class Application {
     employmentStatus: string
     creditScore: number
     assets: string
-    dateApplied: string
+    dateApplied: Date
     Loans: Loan[];
     constructor() {
         this.applicantID = 0
         this.fullName = ''
         this.applicationStatus = ''
-        this.panCard = ''
+        this.panCard = 'test200'
         this.fullName = ''
         this.dateOfBirth = ''
         this.email = ''
@@ -33,7 +33,7 @@ export class Application {
         this.employmentStatus = ''
         this.creditScore = 0
         this.assets = ''
-        this.dateApplied = ''
+        this.dateApplied = new Date();
         this.Loans = []
         this.address = ''
     }
@@ -51,5 +51,11 @@ export class Application {
         this.loanAmount = 0
         this.emi = 0
     }
+  }
+  
+  export interface ApiResponseModel {
+    message: string
+    result: boolean
+    data: any
   }
   
