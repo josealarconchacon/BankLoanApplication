@@ -20,7 +20,7 @@ export class Application {
         this.applicantID = 0
         this.fullName = ''
         this.applicationStatus = ''
-        this.panCard = 'test200'
+        this.panCard = ''
         this.fullName = ''
         this.dateOfBirth = ''
         this.email = ''
