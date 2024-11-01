@@ -4,13 +4,15 @@ import { ApiResponseModel, Application } from '../model/application.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MainService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  addNewApplication(obj: Application) : Observable<ApiResponseModel> {
-    return this.http.post<ApiResponseModel>("https://projectapi.gerasim.in/api/Loan/AddNewApplication", obj)
+  addNewApplication(obj: Application): Observable<ApiResponseModel> {
+    return this.http.post<ApiResponseModel>(
+      'https://projectapi.gerasim.in/api/Loan/AddNewApplication',
+      obj
+    );
   }
 }
